@@ -1,9 +1,10 @@
 import { Pressable, StyleSheet, Text, View, Platform } from "react-native";
 
-export default function CategoryGridTile({ title, color }) {
+export default function CategoryGridTile({ title, color, onPress }) {
   return (
     <View style={[styles.gridItem]}>
       <Pressable
+        onPress={onPress}
         style={({ pressed }) => [
           styles.button,
           pressed && styles.buttonPressed,
